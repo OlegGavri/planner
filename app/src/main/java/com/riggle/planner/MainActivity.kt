@@ -8,7 +8,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.riggle.planner.databinding.ActivityMainBinding
-import com.riggle.planner.ui.SectionsPagerAdapter
+import com.riggle.planner.model.SectionsPagerAdapter
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_list_text,

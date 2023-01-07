@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.riggle.planner.databinding.FragmentMainBinding
+import com.riggle.planner.model.PageViewModel
 
 /**
  * A placeholder fragment containing a simple view.
