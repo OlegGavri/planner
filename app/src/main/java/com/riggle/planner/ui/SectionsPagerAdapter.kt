@@ -1,4 +1,4 @@
-package com.riggle.planner.ui.main
+package com.riggle.planner.ui
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
