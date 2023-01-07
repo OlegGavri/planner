@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Planner</string>
+    <string name="tab_list_text">Job list</string>
+    <string name="tab_plane_text">Job planing</string>
+</resources>
