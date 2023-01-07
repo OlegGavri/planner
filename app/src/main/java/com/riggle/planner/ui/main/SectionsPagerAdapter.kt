@@ -4,10 +4,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
+private const val NumberOfPages = 2
+
 class SectionsPagerAdapter(fragment : FragmentActivity) : FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int {
-        return 2
+        return NumberOfPages
     }
 
     override fun createFragment(position: Int): Fragment {
