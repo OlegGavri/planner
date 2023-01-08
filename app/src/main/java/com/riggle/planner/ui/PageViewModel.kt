@@ -1,4 +1,4 @@
-package com.riggle.planner.model
+package com.riggle.planner.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
