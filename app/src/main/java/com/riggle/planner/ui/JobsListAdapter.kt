@@ -3,16 +3,22 @@ package com.riggle.planner.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.riggle.planner.MainActivity
 import com.riggle.planner.R
+import com.riggle.planner.model.Job
+import com.riggle.planner.model.ApplicationViewModel
 
-class JobsListAdapter : RecyclerView.Adapter<JobsListAdapter.JobViewHolder>()  {
+class JobsListAdapter(
+    private val viewModel : ApplicationViewModel
+    ) : RecyclerView.Adapter<JobsListAdapter.JobViewHolder>()  {
+
     class JobViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val item : TextView = itemView.findViewById<TextView>(R.id.jobTitle)
+        val view : View = itemView
+        lateinit var job : Job
     }
 
-    override fun getItemCount() = 3
+    override fun getItemCount() = viewModel.jobsCount
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JobViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -21,7 +27,17 @@ class JobsListAdapter : RecyclerView.Adapter<JobsListAdapter.JobViewHolder>()  {
     }
 
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
-        holder.item.text = "The text"
-    }
+        val job : Job = viewModel.jobs(position)
+        holder.job = job
 
+        holder.view.apply {
+            setOnClickListener {
+                val mainActivity = context as MainActivity
+                val navController = mainActivity.navController
+
+                viewModel.currentJob = job
+                navController.navigate(R.id.action_jobsFragment_to_taskListFragment)
+            }
+        }
+    }
 }

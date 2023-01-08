@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.riggle.planner.R
 import com.riggle.planner.databinding.FragmentJobsListBinding
+import com.riggle.planner.model.ApplicationViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,7 +45,9 @@ class JobsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentJobsListBinding.bind(view)
 
-        val adapter = JobsListAdapter()
+        val viewModel: ApplicationViewModel by viewModels()
+
+        val adapter = JobsListAdapter(viewModel)
         binding.recyclerView.adapter = adapter
     }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jobsFragment">
+
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.riggle.planner.ui.JobsFragment"
+        android:label="@string/jobs_list_title"
+        tools:layout="@layout/fragment_jobs_list" >
+        <action
+            android:id="@+id/action_jobsFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.riggle.planner.ui.TaskListFragment"
+        android:label="@string/tasks_list_title"
+        tools:layout="@layout/fragment_task_list" />
+</navigation>
