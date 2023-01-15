@@ -12,6 +12,15 @@ import com.google.android.material.snackbar.Snackbar
 import com.riggle.planner.databinding.ActivityMainBinding
 import com.riggle.planner.model.ApplicationViewModel
 
+//TODO: Task detail fragment
+//TODO: Add new job dialog
+//TODO: Add new task dialog
+//TODO: Tasks list adapter
+//TODO: Navigation
+//TODO: List "In progress"
+//TODO: Data
+//TODO: Model
+//TODO: Job and task sorting by name, date, progress
 class MainActivity : AppCompatActivity() {
 
     val viewModel: ApplicationViewModel by viewModels()
