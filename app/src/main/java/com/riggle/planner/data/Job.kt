@@ -16,5 +16,10 @@ data class Job(
 
     // Project that contain this Job
     val project : Project
-
     )
+{
+    // Binding files. Lists of files
+    val notes : List<String> = listOf()
+    val images : List<String> = listOf()
+    val audio : List<String> = listOf()
+}
