@@ -1,11 +1,15 @@
 package com.riggle.planner.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
 
 //
 // One Job
 //
+@Entity
 data class Job(
+    @PrimaryKey val uid : Int,
     val title: String,
     val description : String,
     val created : Date,
