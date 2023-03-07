@@ -3,20 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/jobsFragment">
+    app:startDestination="@id/project_list_fragment">
 
     <fragment
-        android:id="@+id/jobsFragment"
-        android:name="com.riggle.planner.ui.JobsFragment"
-        android:label="@string/jobs_list_title"
-        tools:layout="@layout/fragment_jobs_list" >
+        android:id="@+id/project_list_fragment"
+        android:name="com.riggle.planner.ui.ProjectListFragment"
+        android:label="Projects list"
+        tools:layout="@layout/fragment_project_list">
         <action
-            android:id="@+id/action_jobsFragment_to_taskListFragment"
-            app:destination="@id/taskListFragment" />
+            android:id="@+id/action_project_list_fragment_to_project_edit_fragment"
+            app:destination="@id/project_edit_fragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/taskListFragment"
-        android:name="com.riggle.planner.ui.TaskListFragment"
-        android:label="@string/tasks_list_title"
-        tools:layout="@layout/fragment_task_list" />
+        android:id="@+id/project_edit_fragment"
+        android:name="com.riggle.planner.ui.EditProjectFragment"
+        android:label="Project edit"
+        tools:layout="@layout/fragment_edit_project"/>
 </navigation>

@@ -8,4 +8,13 @@
     <string name="job_description">Job description</string>
     <string name="jobs_list_title">Jobs List</string>
     <string name="tasks_list_title">Tasks list</string>
+    <string name="project_icon_description">Project icon</string>
+    <string name="progress_value">%1$d %%</string>
+    <string name="add_new_project_in_list">Add new project in list</string>
+    <string name="project_title_label">Title</string>
+    <string name="project_description_label">Description</string>
+    <string name="project_created_label">Created</string>
+    <string name="apply_label">Apply</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="add_new_project">Add new project</string>
 </resources>
